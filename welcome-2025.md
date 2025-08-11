@@ -21,7 +21,7 @@ Victor
 
 	Join the "TACC Learn" Slack workspace and the `#2025-coe322-general` channel.  Post a "hello" to introduce yourself.
 
-	**Slack Invite: [Join class Slack](https://join.slack.com/t/tacc-learn/shared_invite/zt-2p8bpr3gw-d2MpUDfYP1vjm6nQj7GM7g)**
+	**Slack Invite: [Join class Slack]()**  GENERATE link just before class
 
 * **Office Hours**: Instructor office hours Tuesday 2-3pm ASE 5.224
 * **Zoom Recordings**: Zoom recordings of each class section will be available via Canvas.
