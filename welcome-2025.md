@@ -7,6 +7,7 @@ I'm Victor Eijkhout, the class professor for Scientific Computation, COE 322 and
 The first few days of class can be a bit bumpy and administrative. Please read the following prior to our first class meeting to acquaint yourself with the class logistics and requirements.
 
 See you in class,
+
 Victor
 
 
@@ -28,7 +29,7 @@ Victor
 
 ## Course Materials
 
-**Equipment Requirements:** A laptop or tablet capable of connecting to the internet. Our classroom has few outlets, so make sure your devices are charged.
+**Equipment Requirements:** Bring to each class a laptop or tablet capable of connecting to the internet. Our classroom has few outlets, so make sure your device is charged.
 
 
 Lecture slides, code examples, the course textbook and all course materials will all be freely available and stored in the class GitHub repository. Take a look to get started.
@@ -54,7 +55,7 @@ Our textbook is [Introduction to Scientific Programming](). The book is availabl
 
 ## Setting up your Coding Environment
 
-We conduct all course work on one of TACC's supercomputers that we're calling the "ISP Machine" or just "ISP" (for **I**ntroduction to **S**cientific **P**rogramming). The ISP machine is a virtual environment set up on TACC's Stampee3 system. In order to login or gain access to any TACC resources, you must create a TACC Portal account.
+We conduct all course work on Stampede3, one of TACC's supercomputers. In order to login or gain access to any TACC resources, you must create a TACC Portal account.
 
 In addition monitoring the class repo, which will contain all the course materials, each student will create their own **private** GitHub repository.
 Each student will create their own **private** Github repository to store and manage homework assignments. The repository will be private to each student and shared only with the instructors and TA for grading purposes.
