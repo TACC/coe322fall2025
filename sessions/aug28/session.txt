@@ -1,0 +1,17 @@
+Compile:
+
+icpx even.cpp -o even
+
+then run:
+
+./even
+
+This program takes interactive input.
+Input from file:
+
+./even < input.txt
+
+Also output to file:
+
+./even < input.txt > output.txt
+
