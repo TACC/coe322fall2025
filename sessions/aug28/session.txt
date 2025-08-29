@@ -1,4 +1,4 @@
-Compile:
+Compile `even.cpp' with output in `even':
 
 icpx even.cpp -o even
 
