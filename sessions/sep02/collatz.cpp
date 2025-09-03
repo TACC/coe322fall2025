@@ -14,7 +14,7 @@ int main() {
       current_value = 3*current_value+1;
     // cout << current_value << '\n';
   }
-  cout << "STarting at " << starting_value << " it took " << iteration_length << " iterations\n";
+  cout << "Starting at " << starting_value << " it took " << iteration_length << " iterations\n";
 
   return 0;
 }
