@@ -1,0 +1,32 @@
+1. loopfloat.cxx illustrates some of the problems with floating point numbers
+
+2. collatz.cpp illustrates using good naming & putting comments in the code.
+There are also a couple of useful emacs commands.
+
+3. Shell programming.
+
+Set a variable:
+
+a=5
+
+Display its value:
+
+echo $a
+
+Pipe:
+
+echo 23 | ./collatz
+
+(the output of the `echo' command is `piped' into the collatz executable)
+
+Do you want to test your program for a bunch of values?
+
+for x in 2 3 5 7 9 13 17 ; do echo $x | ./collatz ; done
+
+(pay attention to where and where not a semicolon; also be generous with spaces)
+
+With apologies for the amount of magic:
+
+for x in $( seq 2 25 ) ; do echo $x | ./collatz ; done
+
+Try it!
