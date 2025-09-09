@@ -1,0 +1,19 @@
+The `primefun.cpp' program states whether an input number is prime.
+
+You should easily be able to write this program.
+If you have trouble, try writing a program for "perfect numbers":
+numbers that are the sum of their divisors. Example
+6 = 1 + 2 + 3
+28 = 1 + 2 + 4 + 7 + 14
+There are two more under 10 thousand.
+
+Two things to remark;
+- this program separates declaration & definition of the function
+- it uses the "boolalpha" function from the "iomanip" header to display a boolean
+
+To test your program, you can
+- test a single number: run and type it, or
+- echo 17 | ./prime
+- test a range by
+for i in {5..500} ; do echo $i | ./prime ; done
+
