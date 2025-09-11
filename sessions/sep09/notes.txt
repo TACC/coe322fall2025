@@ -1,0 +1,6 @@
+`newton.cpp' has some of the building blocks of the Newton code.
+Finish it on your own!
+
+We discussed compilation:
+- icpx -o newton newton.cpp : compile into final executable
+- icpx -c newton.cpp : generate `newton.o' object file if the source does not have a `main'
