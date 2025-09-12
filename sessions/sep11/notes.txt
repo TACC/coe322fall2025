@@ -1,0 +1,27 @@
+More Unix trickery:
+
+!!
+means repeat last command
+
+!-2
+means repeat penultimate command
+
+!?foo?:p
+display last command that contained "foo"
+the ":p" suffix means "print" but do not execute
+- do this if you're not sure that the command found is correct
+- or if you know that you need to do edits on that command
+
+Total Black Magic:
+at one point I had
+
+icpx -o newton newton.cpp && ./newton
+
+to compile & run the newton code.
+Now I want to do that with newton2.
+
+!icpx:s/newton/newton2/:g&
+
+Yes, you can do a substitute on a command line.
+- the ":g&" means global edit: change all occurrences
+- maybe add the ":p" to make sure the edit was correct
