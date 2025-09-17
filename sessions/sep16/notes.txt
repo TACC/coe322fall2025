@@ -11,6 +11,17 @@ Now you can compile with
 
 icpx -std=c++23 yourprogram.cpp -o yourprogram
 
+================
+
+If you get tired of typing that option, you could:
+
+alias ic23='icpx -std=c++23'
+
+and then use "ic23".
+
+To have that option always available,
+add it to the end of your .bashrc file.
+
 ================ Shell scripting
 
 File run_ff.sh
