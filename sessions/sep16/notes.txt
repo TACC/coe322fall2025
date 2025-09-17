@@ -1,0 +1,39 @@
+================ C++
+
+File fmt235.cpp is the skeleton for the I/O exercise.
+
+Note: the "println" function needs C++23 meaning intel/25
+
+module load intel/25
+module save # to save it as your default environment
+
+Now you can compile with
+
+icpx -std=c++23 yourprogram.cpp -o yourprogram
+
+================ Shell scripting
+
+File run_ff.sh
+- is used as
+
+./run_ff.sh 15
+
+This
+- runs a program "ff"
+- pipes a number into this program
+- that number is the first commandline argument: $1
+- there is a test to make sure that the number of arguments $#
+  is more than zero.
+
+Note the first line "#!/bin/bash":
+this means that running the script starts a new shell:
+as if you log in and starts a completely new session
+
+To make the file actually executable:
+
+chmod +x run_ff.sh
+
+"Change the mode to be executable"
+You can display the permissions of a file by
+
+ls -l run_ff.sh
