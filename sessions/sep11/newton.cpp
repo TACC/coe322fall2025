@@ -30,3 +30,8 @@ int main() {
   }
   return 0;
 }
+
+auto f = [] () {};
+auto fprime = derivative(f);
+function< double(double) > derivative( function< double(double) > )
+  
