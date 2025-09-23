@@ -1,0 +1,44 @@
+This directory contains
+
+- unfinished code for the "angle" exercise
+- a cmake setup for compiling this.
+
+To do the regular CMake workflow (see slides in the tutorials directory):
+
+mkdir build
+cd build
+cmake ..
+make
+
+If there is an error in your cpp file, you only have to rerun "make".
+
+Problem:
+- if you look at the cmake output you'll see that it is not using the intel c++ compiler
+- so call:
+
+CXX=icpx cmake ........whatever......
+
+You can also do:
+
+export CXX=icpx
+
+and then call cmake, or put that export line in your bashrc file and it will automatically
+be executed every time you log in.
+
+Next problem:
+- if you rerun cmake & make, cmake gets confused by all the temporary crud it generated the first time.
+
+So it's better to create the build directory everytime.
+I did the following:
+
+( rm -rf build && mkdir build && cd build && CXX=icpx cmake .. && make && ls )
+
+- "rm -rf" deletes the build directory, whether it's there or not
+- mkdir et cetera does the regular cmake workflow
+- I am using "&&" to sequence all these command
+  This is better than "command1 ; command2 ; command3":
+  With the semcolon, command2 would be executed even if command1 fails
+  With "&&" any failing command aborts the rest of the line.
+- I enclose the whole thing in parentheses to create a "subshell",
+  which executes the whoe sequence
+
