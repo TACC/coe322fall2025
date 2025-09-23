@@ -23,6 +23,8 @@ public:
   float distance_to_origin() {
     return sqrt( x*x + y*y );
   };
+  float angle() {
+    return atan(y/x); // atan2(y,x);
 };
 
 int main() {
