@@ -24,9 +24,11 @@ public:
     return sqrt( x*x + y*y );
   };
   float yvalue() { return y; }; // accessor
+  float dx( Point q ) { x-q.x; };
+  float dy( Point q ) { y-q.y; };
   float distance( Point q ) {
-    auto dx = x - q.x;
-    auto dy = y - q.yvalue();
+    auto xdist = dx(q); // x-q.x
+    auto ydist = y - q.yvalue(); // or ydist = dy(q);
     auto sum_of_squares = dx*dx + dy*dy; // pow(dx,2) fine with me
     return std::sqrt( sum_of_squares );
   };
