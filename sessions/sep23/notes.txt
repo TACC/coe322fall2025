@@ -22,7 +22,9 @@ You can also do:
 
 export CXX=icpx
 
-and then call cmake, or put that export line in your bashrc file and it will automatically
+and then call cmake.
+
+More conveniently: put that export line in your bashrc file and it will automatically
 be executed every time you log in.
 
 Next problem:
