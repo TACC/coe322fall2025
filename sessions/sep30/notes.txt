@@ -1,0 +1,51 @@
+================ Unix-isms
+
+---- Wildcards:
+
+ls *.cpp
+
+lists all cpp files
+
+ls a*.cpp
+
+lists all cpp files with names starting with "a"
+
+ls {a,b}*.cpp
+
+lists all cpp files with names starting "a" or "b"
+
+---- How to easily copy files from the public repository
+- find the public repository and
+export PUBLIC=/wherever
+- put that line in your .bashrc
+- now you can (assuming your are in the location where you want the file to go):
+cp $PUBLIC/sessions/sep23/pointclass .
+  where "." means current directory.
+
+---- Juggling directories
+
+Suppose you need to switch between two directories:
+
+cd directory1
+pushd directory2
+
+now you can
+
+pushd
+
+to switch between the two.
+If you are done with the second directory:
+
+popd
+
+================ C++
+
+pointclass.cpp
+
+illustrates an overloaded operator
+
+stream.cpp
+
+illustrates a class that generates all even numbers.
+The only method of the object is "next" which generates the next number.
+

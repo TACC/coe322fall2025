@@ -1,22 +1,24 @@
 // object/stream.cpp
+#include <print>
+using std::println;
+
 class Stream {
 private:
   int last_result{0};
 public:
   int next() {
-    return last_result++; };
+    auto old = last_result;
+    last_result += 2;
+    return old; };
 };
 
 int main() {
   Stream ints;
-  println("Next: {}"
-	  ,
+  println("Next: {}",
 	  ints.next() );
-  println("Next: {}"
+  println("Next: {}",
 	  ints.next() );
-  println("Next: {}"
-	  ,
-	  ,
+  println("Next: {}",
 	  ints.next()
 	  );
   return 0;
