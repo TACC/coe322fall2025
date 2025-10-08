@@ -1,0 +1,19 @@
+================ Unix
+
+Use of wildcards:
+ - in which sudirectory is there a file with "Point" in the name
+   ls */Point*
+ - in which subdirectory is there a cpp file containing the string "Point"
+   grep Point */*.cpp
+
+Note: grep is case sensitive; you can use
+   grep -i point */*.cpp
+for case-insensitive. If you want that as default
+   alias grep='grep -i'
+which you can put in your .bashrc
+
+=============== C++ files
+
+vector.cpp : illustrates overloading the index operator
+
+rectangle.cpp : illustrates inheritance
