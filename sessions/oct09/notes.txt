@@ -1,0 +1,25 @@
+================ Compilation
+
+vector.cpp, named_vector.cpp, named_vector.h
+
+Illustration of separate compilation
+- the main program only uses a header file
+- the header file declares the class name & names of methods & data members
+- the implementation file contains the actual code of class members
+
+# compile implementation file
+# Note the "-c" flag!
+icpx -std=c++23 -c named_vector.cpp
+
+# compile main program
+icpx -std=c++23 -c vector.cpp
+
+# link together object files
+# this has the "-o" flag
+icpx -std=c++23 -o vector vector.o named_vector.o
+
+================ namespace
+
+The file "swap.cpp" illustrates a problem with "using namespace":
+this file should not compile yet it does
+because the namespace implicitly declares a whole bunch of functions.
