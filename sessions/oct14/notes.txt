@@ -1,0 +1,31 @@
+================ Unix isms:
+
+the `history' command givs you all previous commands;
+do for instance
+
+history | grep icpx
+
+to find all invocations of the compiler.
+You can reinvoke a command by number:
+
+$ history | grep icpx | tail -n 5
+ 1290  man icpx
+ 1298  #icpx -c func.cpp
+ 1301  icpx -c func.cpp
+ 1303  icpx -c func.cpp
+ 1323  history | grep icpx | tail -n 5
+[staff sessions:320] !1303
+icpx -c func.cpp
+
+Advanced:
+Compilation with "-c" gives you a ".o" file: object file.
+You can investigate those with `nm':
+
+[staff oct14:325] nm -C func.o
+0000000000000000 T F::print()
+                 U std::basic_ostream<char, [....]
+                 U std::ios_base_library_init()
+                 U std::cout
+
+saying among other that "std::cout" is Undefined in this file,
+and "T" indicates that "F::print" is defined in this file.
