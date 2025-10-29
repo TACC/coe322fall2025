@@ -1,0 +1,24 @@
+================ Unix
+
+1. I was wondering "When did I mention the `nm' command?"
+
+  grep nm sessions/*/notes.txt
+
+That is, search for `nm' in the `notes.txt' file in any subdirectory of `sessions'.
+
+2. How do you efficiently copy a code from the session to your own area?
+
+- go to the session directory, and do `pwd', let's say that gives
+
+  /home/123/yourname/class_repo/sessions
+
+- define a variable
+
+  export SESSIONS=/home/123/yourname/class_repo/sessions
+
+- add that line to your `.bashrc' file in your home directory
+  so that it gets loaded every time you log in
+- and now you can do in your own directory:
+
+  cp $SESSIONS/oct28/rectangle.cpp .
+
