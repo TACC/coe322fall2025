@@ -1,8 +1,9 @@
 #include <print>
 using std::print,std::println;
-
 #include <cmath>
 using std::sqrt;
+#include <memory>
+using std::make_shared,std::shared_ptr;
 
 class Point {
 private:
@@ -26,18 +27,19 @@ public:
 
 class Rectangle {
 private:
-  Point botleft,topright;
+  shared_ptr<Point> botleft,topright;
 public:
   Rectangle( Point bl,Point tr )
     : botleft(bl),topright(tr) {};
   float area() {
-    auto w = topright.dx(botleft),
-      h = topright.dy(botleft);
+    auto w = topright->dx(*botleft), // dereference to get a Point from a shared_ptr<Point>
+      h = topright->yvalue()-botleft->yvalue();
     return w*h; };
 };
 
 int main() {
-  Point p1(1.0,1.0), p2(2.0, 5.0);
+  auto p1 = make_shared<Point>(1.0,1.0);
+  auto p2 = make_shared<Point>(2.0, 5.0);
   Rectangle r(p1,p2);
 
   println( "rect area: {}",r.area());
