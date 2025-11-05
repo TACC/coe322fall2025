@@ -33,7 +33,7 @@ if [ $onlymake -eq 0 ] ; then
     rm -rf build
     mkdir -p build
     cd build
-    cmake ../$1
+    CXX=${TACC_CXX} cmake ../$1
     make
 else
     # or only make
