@@ -1,1 +1,6 @@
-// this file is empty
+#include "linklib.hpp"
+
+int List::length() {
+  return 0;
+};
+
