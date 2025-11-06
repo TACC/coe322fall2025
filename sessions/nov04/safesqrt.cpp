@@ -8,4 +8,7 @@ double safe_root(double x) {
 };
 
 TEST_CASE( "test sqrt function" ) {
+  REQUIRE( safe_root(4.0)==2.0 );
+  REQUIRE( safe_root(4.0)==3.0 );
+
 }

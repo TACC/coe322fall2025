@@ -1,0 +1,33 @@
+================ Unix isms
+
+1. Customize your prompt:
+
+export PS1="[\h \W:\#] "
+
+(in your .bashrc)
+
+2. Don't keep `cd'ing around:
+
+cd location1
+pushd location2
+
+and then `pushd' switches between the two locations.
+
+3. You should really have a clone of the class repository
+on stampede3. Then set
+
+export SESSIONS= .... the place of the sessions directory ...
+
+so that you can
+
+cp -r $SESSIONS/nov04 somewhere/in/your/area
+
+4. I've edited the cbuild script to be more clever about the compiler.
+Note: if cmake says you are using gcc 11 for C++ then it's not picking up
+the right compiler. This should be Intel 2025.
+
+================ C++
+
+nov04/safesqrt.cpp
+
+is the template for the TDD exercises (lecture 13).
