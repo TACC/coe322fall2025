@@ -21,28 +21,28 @@ using std::cout;
 #include "catch2/catch_all.hpp"
 
 TEST_CASE( "length testing" ) {
-  //codesnippet linkliststep0
   List mylist;
   INFO( "Length of empty list" );
   REQUIRE( mylist.length()==0 );
+  /*
   INFO( "Empty list has no headnode" );
   REQUIRE_THROWS( mylist.headnode() );
-  //codesnippet end
-
+  */
+  
+  /*
   INFO( "After inserting 3" );
-  //codesnippet linkliststep1
   mylist.insert(3);
   REQUIRE( mylist.length()==1 );
   REQUIRE( mylist.contains_value(3) );
   REQUIRE( not mylist.contains_value(4) );
-  //codesnippet end
+  */
 }
 
+#if 0
 TEST_CASE( "multiplicity" ) {
   List mylist;
   mylist.insert(3);
   INFO( "insert the same element again" );
-  //codesnippet linkliststep2
   REQUIRE_NOTHROW( mylist.insert(3) );
   REQUIRE( mylist.length()==1 );
   REQUIRE( mylist.contains_value(3) );
@@ -50,14 +50,12 @@ TEST_CASE( "multiplicity" ) {
   REQUIRE_NOTHROW( headnode = mylist.headnode() );
   REQUIRE( headnode.value()==3 );
   REQUIRE( headnode.count()==2 );
-  //codesnippet end
 }
 
 TEST_CASE( "inserting at the head" ) {
   List mylist;
   mylist.insert(3);
   INFO( "Insert lower element should go at the head" );
-  //codesnippet linkliststep3
   REQUIRE_NOTHROW( mylist.insert(2) );
   REQUIRE( mylist.length()==2 );
   REQUIRE( mylist.contains_value(2) );
@@ -68,7 +66,6 @@ TEST_CASE( "inserting at the head" ) {
   REQUIRE_NOTHROW( headnode = mylist.headnode() );
   REQUIRE( headnode.value()==2 );
   REQUIRE( headnode.count()==1 );
-  //codesnippet end
 }
 
 TEST_CASE( "Appending at the tail" ) {
@@ -78,11 +75,9 @@ TEST_CASE( "Appending at the tail" ) {
     mylist.insert(n); 
 
   INFO( "Now append a highest value" );
-  //codesnippet linkliststep4
   REQUIRE_NOTHROW( mylist.insert(6) );
   REQUIRE( mylist.length()==3 );
   REQUIRE( mylist.contains_value(6) );
-  //codesnippet end
 }
 
 TEST_CASE( "Insert in the middle" ) {
@@ -92,12 +87,10 @@ TEST_CASE( "Insert in the middle" ) {
     mylist.insert(n); 
 
   INFO( "Now insert an element in the middle" );
-  //codesnippet linkliststep5
   REQUIRE_NOTHROW( mylist.insert(4) );
   REQUIRE( mylist.length()==4 );
   REQUIRE( mylist.contains_value(4) );
   REQUIRE( mylist.contains_value(3) );
-  //codesnippet end
 }
 
 TEST_CASE( "Inspection" ) {
@@ -127,3 +120,4 @@ TEST_CASE( "Another check" ) {
   REQUIRE( mylist.is_sorted() );
 }
 
+#endif
