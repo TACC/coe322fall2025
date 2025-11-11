@@ -116,4 +116,8 @@ TEST_CASE( "full test" ) {
   quadratic coefficients{a,b,c};
   auto result = compute_roots(coefficients);
   REQUIRE( result.index()==index );
+
+  /* 
+   * Add tests to make sure the answers are correct
+   */
 }
