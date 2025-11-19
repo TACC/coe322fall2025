@@ -36,10 +36,6 @@ TEST_CASE( "discriminant" ) {
   REQUIRE( discriminant( three ) ==Catch::Approx(-.01) );
 }
 
-// in the previous test,
-// try also this:
-//  REQUIRE( discriminant( make_tuple(.1, .1, .1*.5 ) ) == -.01 );
-
 
 TEST_CASE( "D = 0" ) {
   double a,b,c,d; bool z;
