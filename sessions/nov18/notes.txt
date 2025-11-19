@@ -1,0 +1,31 @@
+================ Unix
+
+1. The program `returncode.cpp' does `return 2'.
+You can catch that return in the shell:
+
+./returncode
+echo $?
+
+The variable `$?' is a number 0-255 where 0  by convention indicates success,
+and anything else an error code.
+
+2. Suppose you have a commandline
+
+icpx -o program1 program1.cpp && ./program1
+
+and you want to do that for `program2':
+
+!ic:s/program1/program2/:g&:p
+
+-- `!ic' : get the last command starting with `ic'
+-- `:s/program1/program2/' : edit that command to substitute program1 by program2
+-- `:g&' : and do that substitution globally
+-- `:p' : print it out, just to be sure, and then do `!!' to actually execute it.
+
+================ gdb
+
+Make sure you compile your code with the `-g' option.
+
+If you use cmake, add the option `-D CMAKE_BUILD_TYPE=Debug' to
+the cmake invocation.
+
